@@ -1,0 +1,27 @@
+version: '2'
+services:
+  baseimage:
+    image: hyperledger/fabric-baseimage:x86_64-0.2.0
+
+  vp0:
+    image: hyperledger/fabric-peer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "7050:7050"
+      - "7051:7051"
+      - "7053:7053"
+    environment:
+      - CORE_PEER_ID=vp0
+      - CORE_SECURITY_ENROLLID=test_vp0
+      - CORE_SECURITY_ENROLLSECRET=MwYpmSRjupbT
+      - CORE_PEER_DISCOVERY_PERIOD=60s
+      - CORE_PEER_DISCOVERY_TOUCHPERIOD=61s
+      - CORE_PEER_ADDRESSAUTODETECT=true
+      - CORE_VM_ENDPOINT=unix:///var/run/docker.sock
+      - CORE_LOGGING_LEVEL=DEBUG
+      - CORE_SECURITY_ENABLED=false
+      - CORE_PEER_VALIDATOR_CONSENSUS_PLUGIN=pbft
+      - CORE_PBFT_GENERAL_MODE=batch
+      - CORE_PBFT_GENERAL_N=4
+    command: sh -c "sleep 20; peer node start"

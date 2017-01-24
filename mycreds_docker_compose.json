@@ -1,0 +1,22 @@
+{
+		"peers": [{
+			"api_host": "localhost",
+			"api_port": 7050,
+			"discovery_host": "localhost",
+			"discovery_port": 7051,
+			"type": "peer",
+			"id": "vp0_1"
+		}],
+		"users": [{
+			"enrollId": "admin",
+			"enrollSecret": "Xurw3yU9zI0l"
+		},
+		{
+			"enrollId": "alice",
+			"enrollSecret": "CMS10pEQlB16"
+		}],
+		"memberservices": [{
+			"api_host": "localhost",
+			"api_port": 5054
+		}]
+}

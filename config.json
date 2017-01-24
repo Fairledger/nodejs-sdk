@@ -1,0 +1,42 @@
+{
+   "chainName":"targetChain",
+   "deployWaitTime":"60",
+   "user": {
+	"username": "JohnDoe",
+        "affiliation" : "group1"
+   },
+   "deployRequest":{
+      "chaincodePath":"chaincode",
+			"chaincodeName": "supplychaincode",
+      "functionName":"init",
+      "args":[
+         "101"
+      ]
+   },
+   "invokeContract":{
+      "functionName":"init_contract_terms",
+      "args":[
+				"123ABC58",
+         "cocoa",
+         "15"
+      ]
+   },
+   "invokeRequestShip":{
+      "functionName":"shipment_activity",
+      "args":[
+								"123ABC58",
+                 "50000",
+                 "15",
+                 "12.4",
+                 "KKP Corp",
+                 "Belgium",
+                 "shipment_sent"
+      ]
+   },
+   "queryRequest":{
+      "functionName":"query",
+      "args":[
+         "a"
+      ]
+   }
+}

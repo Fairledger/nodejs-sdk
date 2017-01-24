@@ -1,0 +1,11 @@
+curl localhost:7050/chain/blocks/0
+{
+    "nonHashData": 
+        {
+            "localLedgerCommitTimestamp": 
+                {
+                    "seconds": 1477174494,
+                    "nanos": 134269287
+                }
+        }
+}
